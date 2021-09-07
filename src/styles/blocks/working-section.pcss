@@ -1,0 +1,131 @@
+//Section Working
+
+.working-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  @include phones {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+}
+.container-working{
+  @include phones {
+    width: 100%;
+  }
+}
+
+.working-text__header {
+  @include section-header__block-text;
+  margin-bottom: 109px;
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+.title-working {
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 25px;
+  @include phones {
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+}
+.working-desc {
+  @include section-header__desc;
+}
+.working-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -20px;
+
+  @include tablets {
+    justify-content: inherit;
+    margin-right: -20px;
+  }
+  @include phones {
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+/*
+  @each $bag in (black, blue, red, yellow) {
+    .working-item{
+      background-color: $bag;
+    }
+  }
+  */
+
+.working-item {
+  display: flex;
+  flex-direction: column;
+  //width: calc(100% /4 -20px);
+  width: 290px;
+  margin-right: 20px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 52px;
+  position: relative;
+  margin-bottom: 40px;
+  box-shadow: 0 0 35px rgba(20, 20, 21, 0.21);
+  &:nth-child(1) {
+    background-color: #4eb2f7;
+  }
+  &:nth-child(2) {
+    background-color: #c049f8;
+  }
+  &:nth-child(3) {
+    background-color: #817eff;
+  }
+  &:nth-child(4) {
+    background-color: #f74770;
+  }
+
+  @include tablets {
+    width: calc(100% / 2 - 20px);
+  }
+  @include phones {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.working-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 23px;
+}
+.working-item__title {
+  opacity: 0.9;
+  color: #ffffff;
+  font-family: "Open Sans - Semibold";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 42px;
+  margin-bottom: 24px;
+}
+.working-text {
+  text-align: center;
+  opacity: 0.75;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 80%;
+}
+
+.work-items__link {
+  @include know;
+  position: absolute;
+  bottom: -25px;
+  z-index: 10;
+  &:hover .work-item__link-text {
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.work-item__link-text {
+  @include knowLink;
+}

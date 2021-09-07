@@ -1,0 +1,39 @@
+.client-partner {
+  background-color: #fbfbfb;
+  padding-top: 73px;
+  padding-bottom: 96px;
+  @include desktop {
+    padding-bottom: 56px;
+  }
+  @include phones {
+    padding-top: 25px;
+    padding-bottom: 0px;
+  }
+}
+
+.partner-list {
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  @include desktop {
+  }
+}
+.partner-item {
+  display: flex;
+  justify-content: center;
+  width: calc(100% / 6);
+  @include desktop {
+    width: calc(100% / 3);
+    margin-bottom: 40px;
+  
+  }
+  @include tablets {
+    width: calc(100% / 2);
+  }
+  @include phones {
+    width: calc(100% / 1);
+  }
+}
+.partner-icon {
+  max-width: 100%;
+}

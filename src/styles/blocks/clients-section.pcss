@@ -1,0 +1,215 @@
+.clients {
+  padding-top: 137px;
+  padding-bottom: 144px;
+}
+.clients-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients-header__text {
+  @include section-header__block-text;
+  margin-bottom: 139px;
+}
+.clients-title {
+  margin-bottom: 25px;
+}
+.clients-desc {
+  @include section-header__desc;
+}
+
+.clients-photo {
+  position: absolute;
+  display: flex;
+  width: 99px;
+  height: 99px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(20, 20, 21, 0.38);
+
+  top: -50px;
+  left: center;
+}
+.clients-icon {
+  border-radius: 50%;
+}
+.clients-avis {
+  color: #000000;
+  font-family: "Source Sans Pro";
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 19px;
+  text-align: center;
+
+  width: 60%;
+}
+.clients-profil {
+  display: flex;
+}
+.client-name {
+  color: #000000;
+  display: flex;
+  font-size: 17px;
+  font-family: "Source Sans Pro - Semibold";
+  font-weight: 600;
+  font-style: italic;
+  margin-right: 4px;
+  &::after {
+    content: ",";
+    display: flex;
+    font-size: 17px;
+  }
+}
+.client-post {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Source Sans Pro";
+}
+.star-list {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.star-icon {
+  width: 11px;
+  height: 12px;
+  margin-right: 2px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.slider-wrapper {
+  display: flex;
+
+  //justify-content: center;
+
+  //transition: margin-left 250ms;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  //overflow: hidden;
+}
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  // padding-top: 50px;
+  //padding-bottom: 50px;
+  //padding-left: 20px;
+  //padding-right: 50px;
+  //justify-content: flex-start;
+  //flex-direction: column;
+  //align-items: flex-start;
+  justify-content: center;
+}
+
+.clients-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 93px;
+  padding-bottom: 38px;
+  //padding-left: 45px;
+  //padding-right: 45px;
+  box-shadow: 0 0 27px rgba(20, 20, 21, 0.09);
+  border-radius: 1px;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 150px;
+  width: 60%;
+  //width: 60%;
+  //margin-right: 38px;
+  //flex: 0 0 50%;
+  //max-width: 50%;
+  @include phones {
+    width: 100%;
+  }
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.button-slider {
+  width: 48px;
+  height: 48px;
+  box-shadow: 1px 3px 14px rgba(20, 20, 21, 0.08);
+  background-color: #fc6744;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: #ff6e47;
+  }
+  &:hover.btn-left::after {
+ 
+  }
+  &:hover.btn-right::after {
+    color: #ffffff;
+  }
+  @include phones {
+    bottom: -70px;
+  }
+}
+.btn-left {
+  position: absolute;
+  left: 0px;
+
+  @include phones {
+    left: 25%;
+  }
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: flex;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+}
+
+.btn-right {
+  position: absolute;
+  right: 0px;
+  @include phones {
+    right: 25%;
+  }
+
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: flex;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+///////////////////////////prob
+
+.tt {
+  background: url("/src/images/content/apple-watch.png") center center no-repeat;
+  width: 500px;
+  height: 500px;
+}
+
+.animated {
+  transition: transform 0.6s ease;
+}
+
+.slideInLeft {
+  transition: transform 0.6s ease;
+  transform: translate(-50);
+}
